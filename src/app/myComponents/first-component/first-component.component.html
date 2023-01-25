@@ -1,0 +1,64 @@
+<div class="container">First Component
+    <label for="cars">Choose a Shape:</label>
+
+    <select name="shapes " id="shapes" (click)="onShapeChange($event)">
+        <option *ngFor="let shape of shapes">{{shape.shape}}</option>
+
+    </select>
+    <label for="cars">Choose Color:</label>
+    <select name="colors" id="colors" (click)="onColorChange($event)">
+        <option *ngFor="let color of colors">{{color.color}}</option>
+    </select>
+    <div>SelectedShape:{{selectedShape}}</div>
+    <div>selectedColor:{{selectedColor}}</div>
+
+    <div class="center">
+
+        <div *ngIf="selectedColor == 'red'">
+            <div [ngClass]="{'square': selectedShape == 'square','red': selectedColor == 'red'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'yellow'">
+            <div [ngClass]="{'square': selectedShape == 'square','yellow': selectedColor == 'yellow'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'green'">
+            <div [ngClass]="{'square': selectedShape == 'square','green': selectedColor == 'green'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'red'">
+            <div [ngClass]="{'rectangle': selectedShape == 'rectangle','red': selectedColor == 'red'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'yellow'">
+            <div [ngClass]="{'rectangle': selectedShape == 'rectangle','yellow': selectedColor == 'yellow'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'green'">
+            <div [ngClass]="{'rectangle': selectedShape == 'rectangle','green': selectedColor == 'green'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'green'">
+            <div [ngClass]="{'circle': selectedShape == 'circle','green': selectedColor == 'green'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'yellow'">
+            <div [ngClass]="{'circle': selectedShape == 'circle','yellow': selectedColor == 'yellow'}"> </div>
+        </div>
+        <div *ngIf="selectedColor == 'red'">
+            <div [ngClass]="{'circle': selectedShape == 'circle','red': selectedColor == 'red'}"> </div>
+        </div>
+
+        <!-- <div [ngClass]=" {'red': selectedColor == 'red', 'square': selectedShape == 'square'} "></div>
+        <div [ngClass]=" {'red': selectedColor == 'red', 'circle': selectedShape == 'circle'} "></div>
+        <div [ngClass]=" {'red': selectedColor == 'red', 'rectangle': selectedShape == 'rectangle'} "></div>
+        <div [ngClass]=" {'yellow': selectedColor == 'yellow', 'square': selectedShape == 'square'} "></div>
+        <div [ngClass]=" {'yellow': selectedColor == 'yellow', 'circle': selectedShape == 'circle'} "></div>
+        <div [ngClass]=" {'yellow': selectedColor == 'yellow', 'rectangle': selectedShape == 'rectangle'} "></div>
+        <div [ngClass]=" {'green': selectedColor == 'green', 'circle': selectedShape == 'circle'} "></div>
+        <div [ngClass]=" {'green': selectedColor == 'green', 'rectangle': selectedShape == 'rectangle'} "></div>
+        <div [ngClass]=" {'green': selectedColor == 'green', 'square': selectedShape == 'square'} "></div> -->
+
+        <!--  <div class="square yellow"></div>
+        <div class="square green"></div>
+        <div class="circle red"></div>
+        <div class="circle yellow"></div>
+        <div class="circle green"></div>
+        <div class="rectangle red"></div>
+        <div class="rectangle yellow"></div>
+        <div class="rectangle green"></div> -->
+    </div>
+</div>
